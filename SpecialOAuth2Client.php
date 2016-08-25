@@ -205,7 +205,7 @@ class SpecialOAuth2Client extends SpecialPage {
 			$user->setPassword(User::randomPassword());
 		}
     //$user->addToDatabase();
-    AuthManager::autoCreateUser($user->getName()), 'OAuth2Client', true);
+    AuthManager::autoCreateUser($user->getName(), 'OAuth2Client', true);
 
 		// link local user to remote OAuth2
 		$dbw = wfGetDB( DB_MASTER );
